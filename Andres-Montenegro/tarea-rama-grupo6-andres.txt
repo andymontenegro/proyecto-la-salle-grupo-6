@@ -1,5 +1,6 @@
 Andres grupo 6
 url del fork:
+<<<<<<< HEAD
 https://github.com/jmar5439/proyecto-la-salle
 
 checklist de accesibilidad
@@ -75,3 +76,6 @@ Company Name
 Suit*
 Message*
  2016-LaSalle. All Rights Reserved
+=======
+https://github.com/jmar5439/proyecto-la-salle
+>>>>>>> main
