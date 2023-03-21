@@ -26,7 +26,7 @@ const requestListener = function (request, response) {
       console.log('Body: ' + body);
       response.writeHead(200, { 'Content-Type': 'text/html' });
 	 
-      response.end('post received '+ body);
+      response.end('post received  '+ body);
     });
 
   } else if (request.method == 'GET') {
