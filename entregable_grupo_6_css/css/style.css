@@ -1,7 +1,71 @@
 @import url("reset.css");
+/*  COLOR MORADO NAV, FOOTER, ICONOS: #61458c;
+    COLOR FONDO WHO WE ARE Y PÒRTFOLIO: #f2f2f2
+    COLOR SERVICES: #ffffff
+    COLOR HEADINGS: #4e4e4e
+    COLOR PARRAFOS: #787878
+    COLOR FONDO EMAIL US: #79629e;
+*/
 
 body {
-    width: 1024px;
     font-family: 'Open Sans', sans-serif;
-    background-color: azure;
+}
+
+header {
+    width: 1024px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    height: 300px;
+}
+
+nav {
+    width: 1024px;
+    margin: 0 auto;
+    height: 60px;
+    overflow: hidden;
+    background-color: #61458c;
+}
+
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    display: inline-block;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 300ms ease-out;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+nav li a:hover {
+    display: inline-block;
+    color: #61458c;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+main {
+    width: 1024px;
+    margin: 0 auto;
 }
