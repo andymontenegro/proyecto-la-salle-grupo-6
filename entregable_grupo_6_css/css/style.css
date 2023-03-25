@@ -1,0 +1,7 @@
+@import url("reset.css");
+
+body {
+    width: 1024px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background-color: azure;
+}
