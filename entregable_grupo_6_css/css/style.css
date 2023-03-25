@@ -1,7 +1,34 @@
 @import url("reset.css");
+header {
+    background-image: url("../img/header.jpg");
+    background-size:100% 100%;
+    height: 170px;
+    width: 994px;
+    margin: 0 auto;
+    padding-top: 130px;
+    padding-left: 30px;
+    
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+    text-align: left;
+    font-size: 25px;
+    font-style:normal;
+    font-weight:normal;
+}
+
 
 body {
     width: 1024px;
     font-family: 'Open Sans', sans-serif;
     background-color: azure;
+    margin: 0 auto;
+}
+
+main section h2 {
+    font-style: normal;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
 }
