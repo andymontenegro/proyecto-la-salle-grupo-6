@@ -44,7 +44,7 @@
         </section>
         <aside>
             <section>
-                <p>Buy Cheap Beer <a href="https://www.barcrawlbarcelona.com/cheapest-pubs-in-barcelona/" target="_blank">here</a> </p>
+                <p><a href="https://www.barcrawlbarcelona.com/cheapest-pubs-in-barcelona/" target="_blank">Buy Cheap Beer here</a> </p>
             </section>
         </aside>
         <hr>
@@ -112,14 +112,13 @@
                 <h2>Email Us</h2>
             </header>
             <form action="http://localhost:8000" method="post">
-                <label>Name*: </label><input type="text" required><br>
-                <label>Email*: </label><input type="email" required><br>
-                <label>Phone: </label><input type="number"><br>
-                <label>Company Name: </label><input type="text"><br>
-                <label>Subject*: </label><input type="text" required><br>
-                <label>Massage*: </label><textarea rows="4" cols="50" required></textarea><br>
+                <label for="name">Name*: </label><input id="name" type="text" name="name" required><br>
+                <label for="Email">Email*: </label><input id="Email" type="email" name="Email" required><br>
+                <label for="Phone">Phone: </label><input id="Phone" type="number" name="Phone"><br>
+                <label for="Company">Company Name: </label><input id="Company" type="text" name="Company"><br>
+                <label for="Subject">Subject*: </label><input id="Subject" type="text" name="Subject" required><br>
+                <label for="Message">Message*: </label><textarea id="Message" rows="4" cols="50" name="Message" required></textarea><br>
                 <input type="submit" value="Send">
-                
             </form>
             
         </section>
