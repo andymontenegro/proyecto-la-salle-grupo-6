@@ -1,4 +1,18 @@
+/*  COLOR MORADO NAV, FOOTER, ICONOS: #61458c;
+    COLOR FONDO WHO WE ARE Y PÒRTFOLIO: #f2f2f2
+    COLOR SERVICES: #ffffff
+    COLOR HEADINGS: #4e4e4e
+    COLOR PARRAFOS: #787878
+    COLOR FONDO EMAIL US: #79629e;
+*/
+
 @import url("reset.css");
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: azure;
+    margin: 0 auto;
+}
+
 header {
     background-image: url("../img/header.jpg");
     background-size:100% 100%;
@@ -14,20 +28,62 @@ h1 {
     color:rgb(255, 255, 255);
     text-align: left;
     font-size: 25px;
-    font-style:normal;
-    font-weight:normal;
 }
 
 
-body {
+nav {
     width: 1024px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: azure;
+    margin: 0 auto;
+    height: 60px;
+    overflow: hidden;
+    background-color: #61458c;
+}
+
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    display: inline-block;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 300ms ease-out;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+nav li a:hover {
+    display: inline-block;
+    color: #61458c;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+main {
+    width: 1024px;
     margin: 0 auto;
 }
 
 main section h2 {
-    font-style: normal;
     text-align: center;
     font-size: 27px;
     font-weight: bold;
