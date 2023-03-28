@@ -7,10 +7,13 @@
 */
 
 @import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: azure;
+    background-color: #f2f2f2;
     margin: 0 auto;
+    color: #636363;
+    
 }
 
 header {
@@ -44,6 +47,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-left: 15px;
 }
 
 nav li {
@@ -81,10 +85,215 @@ nav li a:hover {
 main {
     width: 1024px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 main section h2 {
     text-align: center;
-    font-size: 27px;
-    font-weight: bold;
+    color: #000;
+    font-size: 35px;
+    font-weight:500;
+    line-height: 1.5;
+    padding: 30px;
+    
 }
+
+main section h3 {
+    text-align:left;
+    color: #000;
+    font-size: 20px;
+    padding: 15px 15px 15px 0px;
+  
+}
+
+.brief {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.colum{
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+    column-rule: solid 1px #ccc;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.ImagenColum {
+    float:left;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.ImagenPublicidad {
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.service {
+    background-color: #ffffff;
+
+}
+
+.portfolio{
+    
+    
+}
+
+.imgportfolio {
+    display: grid;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    
+    
+}
+
+.imgrotate {
+    transform: translate(0px, 0px);
+    transition: transform 410ms ease-out;
+  }
+  
+.imgrotate:hover {
+    transform: rotate(345deg) translate(0px, 0px);
+  }
+
+.imgrotate2 {
+    transition: transform 800ms ease-out,
+    border 600ms ease 104ms, 
+    border-radius 600ms ease 104ms;;
+}
+  
+.imgrotate2:hover {
+    transform: rotate(360deg) translate(0px, 0px);
+    transition: 
+      transform 800ms ease 104ms, 
+      border 600ms ease 104ms, 
+      border-radius 600ms ease 104ms;
+    border: 600px none rgba(100, 100, 100, 1);
+    border-radius: 50%;
+
+  }  
+
+
+.location {
+    background-color: #ffffff;
+}
+
+.emailus {
+    background-color: #79629e;
+    background-image: url(../img/map-image.png);
+    background-size:100% 100%;
+    color: #ffffff;
+    text-align: center;
+
+}
+.emailus h2 {
+    color: #ffffff;
+}
+
+form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 25px;
+    vertical-align: top;
+    
+}
+
+form input {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border:  none;
+    
+    
+}
+
+form input :required {
+    background-color:#09032ce7;
+}
+
+form textarea {
+    display: inline-block;
+    width: 201px;
+    border-radius: 3px;
+    border:  none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form p {
+    margin-left: 25px;
+}
+
+form submit {
+    display: inline-block;
+    margin-left: 128px;
+    width: 100px;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form submit:hover {
+    display: inline-block;
+    margin-left: 128px;
+    width: 100px;
+    background-color: #dddbdb;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    width: 1014px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: #61458c;
+    color: #ffffff;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 15px;       
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    transition: background-color 300ms ease-out;
+
+}
+
+footer a:hover {
+    display: inline-block;
+    color: #61458c;
+    transition: background-color 300ms ease-out;
+    background-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+
