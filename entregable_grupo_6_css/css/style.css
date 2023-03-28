@@ -250,24 +250,29 @@ form p {
     margin-left: 25px;
 }
 
-form submit {
+.submit {
     display: inline-block;
     margin-left: 128px;
     width: 100px;
+    height: 20px;
     background-color: #ffffff;
     border: 2px;
     border-radius: 5px;
     margin-bottom: 10px;
+    
 }
 
-form submit:hover {
+.submit:hover {
     display: inline-block;
     margin-left: 128px;
     width: 100px;
+    height: 20px;
     background-color: #dddbdb;
     border: none;
     border-radius: 5px;
 }
+
+
 
 footer {
     width: 1014px;
