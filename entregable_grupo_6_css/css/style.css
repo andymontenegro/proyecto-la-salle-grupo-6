@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #cecece;
     margin: 0 auto;
     color: #636363;
     
@@ -108,7 +108,7 @@ main section h3 {
 
 .brief {
     text-align: center;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .colum{
@@ -121,9 +121,9 @@ main section h3 {
     column-rule: solid 1px #ccc;
     line-height: 1.5;
     text-align: justify;
-    margin-bottom: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .ImagenColum {
@@ -159,44 +159,49 @@ main section h3 {
 .icon-circle {
     color: #61458c;
     float: left;
-    font-size: 50px;
+    font-size: 42px;
     text-align: center;
-    width: 88px;
-    height: 65px;
+    width: 90px;
+    height: 90px;
     border: #d3d3d3 4px solid;
     border-radius: 50%;
-    margin: 0 auto;
-    padding-top: 15px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  
 }
 
 .icon-circle:hover {
-    color: #61458c;
-    background-color: #e6e3ee;
-    font-size: 50px;
+    color: white;
+    background-color: #61458c;
+    float: left;
+    font-size: 42px;
     text-align: center;
-    width: 88px;
-    height: 65px;
-    border: #d3d3d3 4px solid;
+    width: 90px;
+    height: 90px;
+    border: #61458c  4px solid;
     border-radius: 50%;
-    margin: 0 auto;
-    padding-top: 15px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms ease-out;
 }
 
 .icon-circle:active {
-    color: #ffffff;
-    background-color: #8d7bad;
-    font-size: 50px;
+    color: white;
+    float: left;
+    font-size: 42px;
     text-align: center;
-    width: 88px;
-    height: 65px;
-    border: #68587f 4px solid;
+    width: 90px;
+    height: 90px;
+    border: #d3d3d3 4px solid;
     border-radius: 50%;
-    margin: 0 auto;
-    padding-top: 15px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -372,6 +377,18 @@ footer a:hover {
     transition: background-color 300ms ease-out;
     background-color: rgba(255, 255, 255, 1);
     text-decoration: none;
+}
+
+.fondo-claro {
+    background-color: #f2f2f2;
+}
+
+.padding-bottom {
+    padding-bottom: 30px;
+}
+
+.padding-contact {
+    padding-bottom: 60px;
 }
 
 
