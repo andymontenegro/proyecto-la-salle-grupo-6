@@ -148,10 +148,10 @@ main section h3 {
 }
 
 .service article {
-    margin-left: 60px;
+    margin-left: 50px;
     float: left;
     width: 250px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     
     
 }
@@ -372,16 +372,6 @@ footer a:hover {
     transition: background-color 300ms ease-out;
     background-color: rgba(255, 255, 255, 1);
     text-decoration: none;
-}
-
-.icon-circle {
-    width: 90px;
-    height: 90px;
-    border: 4px #d3d3d3 solid;
-    border-radius: 50%;  
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
 }
 
 
