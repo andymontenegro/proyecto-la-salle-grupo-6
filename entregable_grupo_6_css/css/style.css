@@ -142,7 +142,61 @@ main section h3 {
 
 .service {
     background-color: #ffffff;
+    text-align: justify;
+    height: 600px;
 
+}
+
+.service article {
+    margin-left: 60px;
+    float: left;
+    width: 250px;
+    margin-bottom: 50px;
+    
+    
+}
+
+.icon-circle {
+    color: #61458c;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    width: 88px;
+    height: 65px;
+    border: #d3d3d3 4px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-right: 10px;
+ 
+}
+
+.icon-circle:hover {
+    color: #61458c;
+    background-color: #e6e3ee;
+    font-size: 50px;
+    text-align: center;
+    width: 88px;
+    height: 65px;
+    border: #d3d3d3 4px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-right: 10px;
+}
+
+.icon-circle:active {
+    color: #ffffff;
+    background-color: #8d7bad;
+    font-size: 50px;
+    text-align: center;
+    width: 88px;
+    height: 65px;
+    border: #68587f 4px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-right: 10px;
 }
 
 
@@ -186,6 +240,27 @@ main section h3 {
 
 .location {
     background-color: #ffffff;
+    text-align: justify;
+    padding-bottom: 150px;
+
+    
+}
+
+address {
+    display: inline-block;
+    padding-top: 25px;
+    width: 185px;
+
+}
+
+.mapa {
+    float:left;
+    width: 350px;
+    height: 350px;
+    border:rgb(0, 0, 0) 2px solid;
+    border-radius: 50%;
+    margin-left: 250px;
+    margin-right: 50px;
 }
 
 .emailus {
