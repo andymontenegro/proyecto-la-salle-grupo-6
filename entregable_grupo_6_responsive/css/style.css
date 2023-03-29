@@ -1,0 +1,42 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    color: #636363;
+    
+}
+
+
+header {
+    background-image: url("../img/header-mini.png");
+    
+    background-size:100% 121%;
+    height: 170px;
+    
+    padding-top: 70px;
+    padding-left: 30px;
+    
+}
+
+header h1 {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+nav {
+    color:rgb(255, 255, 255);
+    background-color: #61458c;
+    color: var(--bs-blue);
+}
+
+
+
+.menubtn {
+    
+    color:rgb(255, 255, 255);
+    border: #f2f2f2 2px solid;
+
+}
