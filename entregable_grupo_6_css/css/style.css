@@ -374,4 +374,14 @@ footer a:hover {
     text-decoration: none;
 }
 
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    border: 4px #d3d3d3 solid;
+    border-radius: 50%;  
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 
