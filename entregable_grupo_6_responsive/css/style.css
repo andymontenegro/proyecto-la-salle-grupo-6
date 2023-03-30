@@ -46,6 +46,8 @@ nav {
    
 }
 
+/*Seccion del Who We are*/
+
 .we-text {
     text-align: justify;
 }
@@ -68,3 +70,6 @@ nav {
     height: 40%;
     width: 40%;
 }
+
+/*Seccion del Services*/
+
