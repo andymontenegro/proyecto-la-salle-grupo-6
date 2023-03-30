@@ -73,3 +73,58 @@ nav {
 
 /*Seccion del Services*/
 
+
+
+.icon-circle {
+    color: #61458c;
+    
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #d3d3d3 4px solid;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms ease-out;
+    transition: color 300ms ease-out;
+}
+
+@media screen and (min-width: 700px) {
+.icon-circle:hover {
+    color: #6c538d;
+    background-color: #e8e2ee;
+    float: left;
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #939097  4px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+}
+
+
+.icon-circle:active {
+    color: white;
+    float: left;
+    background-color: #8d7bad;
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #655b74 4px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
