@@ -174,3 +174,32 @@ nav {
     border-radius: 50% !important;
 
   }  
+
+  /* Seccion Location */
+
+
+  address {   
+    font-style: normal;
+    padding-top: 25px;
+
+}
+
+@media screen and (max-width: 992px) {
+    address {   
+        font-style: normal;
+        padding-top: 25px;
+        text-align: center;
+        
+ 
+    }
+}
+
+
+.mapa {
+    margin-top: 20px;
+    width: 350px !important;
+    height: 350px !important;
+    border:rgb(0, 0, 0) 2px solid;
+    border-radius: 50%;
+
+}
