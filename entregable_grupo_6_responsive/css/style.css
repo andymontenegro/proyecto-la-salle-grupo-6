@@ -46,9 +46,25 @@ nav {
    
 }
 
+.we-text {
+    text-align: justify;
+}
 
+@media screen and (min-width: 992px) {
+.colum {
+    border-left: solid 1px #ccc;
+}
+}
 
 .Img1 {
     float: left; 
     margin-right: 20px;
+}
+
+.ImgAds {
+    float: right; 
+    margin-left: 20px;
+    margin-right: 5px;
+    height: 40%;
+    width: 40%;
 }
