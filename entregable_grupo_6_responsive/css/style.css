@@ -46,6 +46,17 @@ nav {
    
 }
 
+.navbar .navbar-nav .nav-link:hover{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: #61458c !important;/*no toma el cambio de color de letra sino agrego el important*/
+    text-align: center;  
+    
+    border-radius: 4px;
+}
+
+
+
 /*Seccion del Who We are*/
 
 .we-text {
