@@ -104,7 +104,7 @@ nav {
     transition: color 300ms ease-out;
 }
 
-@media screen and (min-width: 700px) {
+
 .icon-circle:hover {
     color: #6c538d;
     background-color: #e8e2ee;
@@ -121,7 +121,7 @@ nav {
     align-items: center;
     
 }
-}
+
 
 
 .icon-circle:active {
@@ -139,3 +139,38 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+
+
+/* Seccion Portfolio */
+
+.imgrotate {
+    max-height: 170px;
+    max-width: 360px !important;
+    transform: translate(0px, 0px);
+    transition: transform 410ms ease-out;
+    border-radius: 4px !important;
+  }
+  
+.imgrotate:hover {
+    transform: rotate(345deg) translate(0px, 0px);
+  }
+
+.imgrotate2 {
+    max-height: 170px; /* PENDIENTE HACER QUE LAS IMAGENES QUEDEN TODAS AJUSTADAS - img-fluid hace que se ajusten al ancho y al movil queda mal*/
+    max-width: 360px !important;
+    transition: transform 800ms ease-out,
+    border 600ms ease 104ms, 
+    border-radius 600ms ease 104ms !important; 
+}
+  
+.imgrotate2:hover {
+    transform: rotate(360deg) translate(0px, 0px);
+    transition: 
+      transform 800ms ease 104ms, 
+      border 600ms ease 104ms, 
+      border-radius 600ms ease 104ms !important;
+    border: 600px none rgba(100, 100, 100, 1) !important;
+    border-radius: 50% !important;
+
+  }  
