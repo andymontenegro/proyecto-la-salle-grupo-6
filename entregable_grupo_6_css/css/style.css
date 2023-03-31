@@ -140,11 +140,21 @@ main section h3 {
   
 }
 
-.service {
+.services {
     background-color: #ffffff;
-
+    padding: 5em;
+    display: flex;
 }
 
+.servicesItem {
+    display: flex;
+    
+}
+
+.portfolio{
+    
+    
+}
 
 .imgportfolio {
     display: grid;
