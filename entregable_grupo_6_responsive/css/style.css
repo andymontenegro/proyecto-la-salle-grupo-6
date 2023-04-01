@@ -16,11 +16,12 @@ header {
     background-image: url("../img/header.jpg");
     
     background-size:100% 120%;
-    height: 170px;
+    height: 300px;
     padding-top: 70px;
     padding-left: 30px;  
        
 }
+
 /* CAMBIO DE IMAGEN SEGUN TAMAÑO DE PANTALLA DE FORMA MANUAL - 
 PODRIA SER CON BOOTSTRAP TAMBIEN, PERO LO DEJARE ASI PARA TENER ESTA PRACTICA */
 
@@ -30,7 +31,7 @@ PODRIA SER CON BOOTSTRAP TAMBIEN, PERO LO DEJARE ASI PARA TENER ESTA PRACTICA */
         background-image: url("../img/header-mini.png");
         
         background-size:100% 121%;
-        height: 170px;
+        height: 300px;
         padding-top: 70px;
         padding-left: 30px;
      
@@ -219,7 +220,9 @@ nav {
     background-color: #61458c;                
 }
 
-
+label {
+    font-weight: bold;
+}
 
           
 form input {
