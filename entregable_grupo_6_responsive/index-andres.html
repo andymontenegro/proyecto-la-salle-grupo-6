@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/f941904723.js" crossorigin="anonymous"></script> <!--Font awesome Icons -->
 
     <!-- Bootstrap CSS -->
@@ -36,7 +37,7 @@
 
           <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav me-auto mb-2 ms-3 mb-md-0">
-              <hr class="d-md-none text-white-50">
+
               <li class="nav-item ms-2">
                 <a class="nav-link active" href="#we">Who We Are?</a>
               </li>
@@ -91,7 +92,7 @@
                   <div class="col-12">
                   <h3>Lorem Ipsum</h3>
                   <picture> 
-                    <img class="img-fluid d-none d-lg-block float-right ImgAds"  src="./img/ad.jpg"> <!-- imagen Publicidad que se muestra aparter de lg, d-none primero quita la visibilidad-->
+                    <img class="img-fluid d-none d-lg-block float-right ImgAds"  src="./img/ad.jpg" alt="ads"> <!-- imagen Publicidad que se muestra aparter de lg, d-none primero quita la visibilidad-->
                   </picture>
                   <p> 
                     Sed elementum tempus egestas sed sed risus. Etiam non quam lacus suspendisse. Tellus cras adipiscing enim eu turpis.
@@ -325,8 +326,7 @@
         <!-- Email Section -->
         <section id="contact" class="email email-padding">
           <div class="fondo d-flex justify content-center align-item-center">
-      
-            
+    
               <div class="container pb-3">
                 <div class="row"> <!-- header Email -->
                   <div class="col-12 col-md-6 text-center mx-auto my-4 portfolio-header"> <!-- Hago que tome un ancho maximo de 6 col cuando la pantalla es grande, y lo centro con mx-auto, con mt y mb le doy margin top y margin botton, my es top y botton al mismo tiempo-->
@@ -335,63 +335,64 @@
                 </div>
       
                 <form action="http://localhost:8000" method="post">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-4 mx-auto text-start" >
-                    
-                      <div class="row mb-2 ">
-                        <div class="col-12 col-md-3 mb-2  text-lg-end">
-                          <label for="name">Name*: </label>
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mx-auto text-start" >
+                      
+                        <div class="row mb-2 ">
+                          <div class="col-12 col-md-3 mb-2  text-lg-end">
+                            <label for="name">Name*: </label>
+                          </div>
+                          <div class="col-12 col-md-9 ">
+                            <input id="name" type="text" name="name" required>
+                          </div>
                         </div>
-                        <div class="col-12 col-md-9 ">
-                          <input id="name" type="text" name="name" required>
+        
+                        <div class="row mb-2">
+                          <div class="col-12 col-md-3 mb-2 text-lg-end">
+                            <label for="email">Email*: </label>
+                          </div>
+                          <div class="col-12 col-md-9 ">
+                            
+                            <input id="email" type="email" name="email" required>
+                          </div>
                         </div>
-                      </div>
-      
-                      <div class="row mb-2">
-                        <div class="col-12 col-md-3 mb-2 text-lg-end">
-                          <label for="email">Email*: </label>
+        
+                        <div class="row mb-2">
+                          <div class="col-12 col-md-3 mb-2  t text-lg-end">
+                            <label for="phone">Phone: </label>
+                          </div>
+                          <div class="col-12 col-md-9">
+                            <input id="phone" type="number" name="phone">
+                          </div>
                         </div>
-                        <div class="col-12 col-md-9 ">
-                          
-                          <input id="email" type="email" name="email" required>
+        
+                        <div class="row mb-2">
+                          <div class="col-12 col-md-3 mb-2 text-lg-end">
+                            <label for="subject">Subject*: </label>
+                          </div>
+                          <div class="col-12 col-md-9">
+                            <input id="subject" type="text" name="subject" required>
+                          </div>
                         </div>
-                      </div>
-      
-                      <div class="row mb-2">
-                        <div class="col-12 col-md-3 mb-2  t text-lg-end">
-                          <label for="phone">Phone: </label>
+        
+                        <div class="row mb-2">
+                          <div class="col-12 col-md-3 mb-2 text-lg-end">
+                            <label for="message">Message*: </label>
+                          </div>
+                          <div class="col-12 col-md-9">
+                            <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+                          </div>
                         </div>
-                        <div class="col-12 col-md-9">
-                          <input id="phone" type="number" name="phone">
+        
+                        <div class="row  text-center">
+                          <div class="col-12">
+                            <input type="submit" class="submit" value="Send">
+                          </div>
                         </div>
-                      </div>
-      
-                      <div class="row mb-2">
-                        <div class="col-12 col-md-3 mb-2 text-lg-end">
-                          <label for="subject">Subject*: </label>
-                        </div>
-                        <div class="col-12 col-md-9">
-                          <input id="subject" type="text" name="subject" required>
-                        </div>
-                      </div>
-      
-                      <div class="row mb-2">
-                        <div class="col-12 col-md-3 mb-2 text-lg-end">
-                          <label for="message">Message*: </label>
-                        </div>
-                        <div class="col-12 col-md-9">
-                          <textarea id="message" name="message" rows="5" cols="40" required></textarea>
-                        </div>
-                      </div>
-      
-                      <div class="row  text-center">
-                        <div class="col-12">
-                          <input type="submit" class="submit" value="Send" />
-                        </div>
-                      </div>
-                
-                  </form>
+                    </div>
                   </div>
+                </form>
+              </div>
           </div>
           
         </section>
