@@ -295,3 +295,7 @@ footer a:hover {
     background-color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
+
+.conborde {
+    border:  1px solid #61458c;
+}
