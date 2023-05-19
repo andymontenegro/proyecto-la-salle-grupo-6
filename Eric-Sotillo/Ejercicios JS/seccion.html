@@ -1,0 +1,83 @@
+<section id="seccion3" class="p-2 pt-5 pb-5 p-md-5 bg-light text-center" data-controller="kn"
+data-kn-tecla-value="3" data-action="keyup@window->kn#scroll">
+<div class="container" data-controller="lazy" data-lazy-url-value="./portfolio.html">
+
+</div>
+</section>
+el JS
+import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+window.Stimulus = Application.start()
+
+class KN extends Controller {
+static values = { tecla: String };
+scroll(event) {
+if (event.key === this.teclaValue) {
+this.element.scrollIntoView();
+}
+}
+}
+Stimulus.register("kn", KN)
+
+
+
+class Lazy extends Controller {
+static values = { url: String }
+loaded = false;
+
+connect() {
+let observer = new IntersectionObserver(((cosas) => this.load(cosas)), { rootMargin: "-100px" });
+observer.observe(this.element)
+// console.log(observer);
+}
+load(cosas, observe) {
+console.log(cosas);
+if (this.loaded) { return };
+if (!cosas[0].isIntersecting) { return }
+this.loaded = true;
+
+fetch(this.urlValue).then(response => response.text()).then(text => { this.element.innerHTML = text })
+}
+}
+
+Stimulus.register("lazy", Lazy)
+
+
+class Filterable {
+    constructor(data) {
+        this.data = data
+    }
+    filtros = new Set()
+    addFilter(filtro) {
+        this.filtros.add(filtro)
+    }
+    run() {
+        return this.data.filter(persona => [...this.filtros].every(filtro => filtro(persona)))
+    }
+
+    removeFilter(filtro) {
+        this.filtros.delete(filtro)
+    }
+
+    clearFilters() {
+        this.filtros = new Set()
+    }
+}
+
+let persons = [
+    {
+        age: 58, name: "susan"
+    },
+    {
+        age: 30, name: "Jack"
+    },
+]
+
+let list = new Filterable(persons);
+list.addFilter(p => p.age > 50)
+console.log(list.run()) // returns an array
+let jack = p => p.name == "Jack"
+list.addFilter(jack)
+console.log(list.run()) // returns another array
+list.removeFilter(jack) // remove filter
+list.clearFilters()
+console.log(list.run())
