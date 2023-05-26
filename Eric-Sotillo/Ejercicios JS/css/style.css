@@ -295,3 +295,39 @@ footer a:hover {
     background-color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
+
+.text-wrapper {
+    margin: 0;
+    height: 50px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    justify-content: flex-start;
+    background: #f251f5;
+    overflow: hidden;
+}
+
+.text-wrapper article {
+    font-size: 40px;
+    text-align: left;
+    display: inline-block;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #070707;
+    text-stroke-color: #fff;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-rtl 60000ms linear infinite;
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
