@@ -7,57 +7,55 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f2f2f2;
     /*margin: 0 auto;*/
-    color: #636363;
+    color: #636363;    
 }
 
 
 @media screen and (min-width: 992px) {
-    header {
-        background-image: url("../img/header.jpg");
+header {
+    background-image: url("../img/header.jpg");
+    
+    background-size:100% 120%;
+    height: 300px;
+    padding-top: 70px;
+    padding-left: 30px;  
+       
+}
 
-        background-size: 100% 120%;
-        height: 300px;
-        padding-top: 70px;
-        padding-left: 30px;
-
-    }
-
-    /* CAMBIO DE IMAGEN SEGUN TAMAÑO DE PANTALLA DE FORMA MANUAL - 
+/* CAMBIO DE IMAGEN SEGUN TAMAÑO DE PANTALLA DE FORMA MANUAL - 
 PODRIA SER CON BOOTSTRAP TAMBIEN, PERO LO DEJARE ASI PARA TENER ESTA PRACTICA */
 
 }
-
 @media screen and (max-width: 992px) {
     header {
         background-image: url("../img/header-mini.png");
-
-        background-size: 100% 121%;
+        
+        background-size:100% 121%;
         height: 300px;
         padding-top: 70px;
         padding-left: 30px;
-
+     
     }
 }
 
 header h1 {
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     text-align: center;
     font-size: 25px;
 }
 
 nav {
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     background-color: #61458c;
-
+   
 }
 
-.navbar .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover{
     display: inline-block;
     background-color: rgb(255, 255, 255);
-    color: #61458c !important;
-    /*no toma el cambio de color de letra sino agrego el important*/
-    text-align: center;
-
+    color: #61458c !important;/*no toma el cambio de color de letra sino agrego el important*/
+    text-align: center;  
+    
     border-radius: 4px;
 }
 
@@ -70,18 +68,18 @@ nav {
 }
 
 @media screen and (min-width: 992px) {
-    .colum {
-        border-left: solid 1px #ccc;
-    }
+.colum {
+    border-left: solid 1px #ccc;
+}
 }
 
 .Img1 {
-    float: left;
+    float: left; 
     margin-right: 20px;
 }
 
 .ImgAds {
-    float: right;
+    float: right; 
     margin-left: 20px;
     margin-right: 5px;
     height: 40%;
@@ -94,7 +92,7 @@ nav {
 
 .icon-circle {
     color: #61458c;
-
+    
     font-size: 42px;
     text-align: center;
     width: 80px;
@@ -119,13 +117,13 @@ nav {
     text-align: center;
     width: 80px;
     height: 80px;
-    border: #939097 4px solid;
+    border: #939097  4px solid;
     border-radius: 50%;
     margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 
@@ -156,48 +154,47 @@ nav {
     transform: translate(0px, 0px);
     transition: transform 410ms ease-out;
     border-radius: 4px !important;
-}
-
+  }
+  
 .imgrotate:hover {
     transform: rotate(345deg) translate(0px, 0px);
-}
+  }
 
 .imgrotate2 {
-    max-height: 170px;
-    /* */
+    max-height: 170px; /* */
     max-width: 360px !important;
     transition: transform 800ms ease-out,
-        border 600ms ease 104ms,
-        border-radius 600ms ease 104ms !important;
+    border 600ms ease 104ms, 
+    border-radius 600ms ease 104ms !important; 
 }
-
+  
 .imgrotate2:hover {
     transform: rotate(360deg) translate(0px, 0px);
-    transition:
-        transform 800ms ease 104ms,
-        border 600ms ease 104ms,
-        border-radius 600ms ease 104ms !important;
+    transition: 
+      transform 800ms ease 104ms, 
+      border 600ms ease 104ms, 
+      border-radius 600ms ease 104ms !important;
     border: 600px none rgba(100, 100, 100, 1) !important;
     border-radius: 50% !important;
 
-}
+  }  
 
-/* Seccion Location */
+  /* Seccion Location */
 
 
-address {
+  address {   
     font-style: normal;
     padding-top: 25px;
 
 }
 
 @media screen and (max-width: 992px) {
-    address {
+    address {   
         font-style: normal;
         padding-top: 25px;
         text-align: center;
-
-
+        
+ 
     }
 }
 
@@ -206,7 +203,7 @@ address {
     margin-top: 20px;
     width: 350px !important;
     height: 350px !important;
-    border: rgb(0, 0, 0) 2px solid;
+    border:rgb(0, 0, 0) 2px solid;
     border-radius: 50%;
 
 }
@@ -219,51 +216,51 @@ address {
     height: 50hv;
     background-position: center;
     background-repeat: none;
-    background-size: cover;
-    background-color: #61458c;
+    background-size: cover; 
+    background-color: #61458c;                
 }
 
 label {
     font-weight: bold;
 }
 
-
+          
 form input {
 
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 30px;
-
+    
     border-radius: 3px;
-    border: none;
-
-
+    border:  none;
+    
+    
 }
 
 form input :required {
-    background-color: #09032ce7;
+    background-color:#09032ce7;
 }
 
 form textarea {
-
+    
     width: 100%;
     border-radius: 3px;
-    border: none;
+    border:  none;
     font-family: 'Open-Sans', Helvetica, sans-serif;
 }
 
 
 .submit {
-
-
+    
+    
     width: 100px;
     height: 25px;
     background-color: #ffffff;
     border: 2px;
     border-radius: 5px;
-
+    
     text-align: center;
-
+    
 }
 
 
@@ -273,7 +270,7 @@ form textarea {
 /* Seccion Footer */
 
 footer {
-
+    
     margin: 0 auto;
     background-color: #61458c;
     color: #ffffff;
@@ -281,7 +278,7 @@ footer {
     padding-top: 10px;
     padding-right: 10px;
     font-size: 15px;
-    padding-bottom: 12px;
+    padding-bottom: 12px;       
 }
 
 footer a {
@@ -297,48 +294,4 @@ footer a:hover {
     transition: background-color 300ms ease-out;
     background-color: rgba(255, 255, 255, 1);
     text-decoration: none;
-}
-
-.conborde {
-    border: 1px solid #61458c;
-}
-
-/* para la marquesina */
-.marquee {
-    height: 25px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    background-color: #bba4df;
-}
-
-.marquee article {
-    display: inline-block;
-    width: 200%;
-    height: 30px;
-
-    position: relative;
-    overflow: hidden;
-    font-family: 'Roboto Slab', serif;
-    color: #291942;
-    animation: marquee 20s linear infinite;
-
-}
-
-
-@keyframes marquee {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -100%;
-    }
-}
-
-#cats-facts article::before,
-#cats-facts article::after {
-    content: "😻";
-    display: inline-block;
 }
