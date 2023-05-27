@@ -315,9 +315,9 @@ footer a:hover {
 
 .marquee article {
     display: inline-block;
-    width: 200%;
+    width: fit-content;
     height: 30px;
-
+    text-align: center;
     position: relative;
     overflow: hidden;
     font-family: 'Roboto Slab', serif;
@@ -327,13 +327,13 @@ footer a:hover {
 }
 
 
-@keyframes marquee {
+@keyframes marquee  {
     0% {
-        left: 100%;
+        left: 50%;
     }
 
     100% {
-        left: -100%;
+        left: -120%;
     }
 }
 
