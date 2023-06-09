@@ -8,7 +8,7 @@ for (let link of enlaces){
     })
 }*/
 
-import "./cats.js";
+import "./Test.js";
 import "./navKeys.js";
 
 

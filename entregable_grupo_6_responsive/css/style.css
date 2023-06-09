@@ -314,7 +314,7 @@ footer a:hover {
 }
 
 .marquee article {
-    display: inline-block;
+    display: flex;
     width: fit-content;
     height: 30px;
     text-align: center;
@@ -322,14 +322,14 @@ footer a:hover {
     overflow: hidden;
     font-family: 'Roboto Slab', serif;
     color: #291942;
-    animation: marquee 20s linear infinite;
+    animation: marquee 50s linear infinite;
 
 }
 
 
 @keyframes marquee  {
     0% {
-        left: 50%;
+        left: 100%;
     }
 
     100% {

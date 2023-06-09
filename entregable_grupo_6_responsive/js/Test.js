@@ -1,26 +1,22 @@
 console.log('Javascript cargado');
 const url = 'https://catfact.ninja/fact';
 const div = document.querySelector('#cats-facts');
-const span = "<spam></spam>"
+const span = "<spam></spam>";
+let options = {
+    root: null,
+    threshold: 0,
+  };
 //const fact = div.querySelector("#article");
 
 
 
 
 const observer = new IntersectionObserver( entries => {
-//cuando esta intersectando debo solicitar un nuevo fact
-//cuando ha dejado de intersectar puedo borrar el primero
-//console.log(entries);
 
-/*
-    | PANTALLA     | <Article<span>> 
-
-*/  
     let entry = entries[0];
-   /*  if(!entry.target.nextElementSibling && !entry.target.previousElementSibling){
-        console.log("Unico Fact - Agrego otro")
-        showFact();
-    } */
+
+    
+
 
 
     if (entry.isIntersecting){
@@ -28,8 +24,7 @@ const observer = new IntersectionObserver( entries => {
         if (!entry.target.nextElementSibling) {
             
                 showFact();
-            
-            
+                
             //loadFact();
             console.log("Es el ultimo - Agregar")
         }
@@ -37,16 +32,20 @@ const observer = new IntersectionObserver( entries => {
         console.log("Elemento Visible");
     } else {
         if (!entry.target.previousElementSibling){
-            //cleanupOne();
+            cleanupOne();
+
             //entry.target.remove
             console.log("Es el primero - Quitar del dom y quitar obserser");
             
             //div.removeChild(div.firstChild);
-            //observer.unobserve(entry.target);
+            observer.unobserve(entry.target);
+
         } 
         //console.log("No Visible");
     }
-});
+
+
+},options);
 
 
 
@@ -56,13 +55,13 @@ const observer = new IntersectionObserver( entries => {
 async function loadFact() {
     const resp = await fetch(url);
     const json = await resp.json();
-    console.log('Dato sobre gatos es: ', json.fact);
+    //console.log('Dato sobre gatos es: ', json.fact);
     return json.fact;
 };
 
 //Se agrega el Fact dentro del elemento Article
 function factArticle(fact) {
-    const article = document.createElement("article");  
+    const article = document.createElement("article");
     article.innerText = fact;
     //<article>fact</article><span></span>|<article>fact</article><span></span><article>fact </article><span></span>|
     return article;
@@ -75,7 +74,7 @@ function renderFact(fact) {
     div.appendChild(article);
 /*     const span = document.createElement("span");
     article.appendChild(span); */
-    observer.observe(div.firstElementChild);
+    observer.observe(article);
 }
 
 //Mostrar un Fact - Primero carga un fact y luego crear un articulo
@@ -85,7 +84,7 @@ async function showFact() {
 }
 //showFact();
 async function cleanupOne() {
-    div.removeChild(div.firstChild);
+    div.removeChild(div.firstElementChild);
 }
 
 
@@ -112,6 +111,8 @@ await showFact();
 
 //observer.observe(div[0]);
 //console.log(fact);
+
+
 
 
 

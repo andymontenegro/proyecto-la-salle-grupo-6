@@ -3,17 +3,98 @@ document.addEventListener("keyup", function(event){
      if (maybeLink) {maybeLink.click()};
  })
 
+
+ //viewport 
+ var seccion1 = document.getElementById("we");
+ var seccion2 = document.getElementById("services");
+ var seccion3 = document.getElementById("portfolio");
+ var seccion4 = document.getElementById("location");
+ var seccion5 = document.getElementById("contact");
+ 
+ var distance1 = seccion1.getBoundingClientRect();
+ var distance2 = seccion2.getBoundingClientRect();
+ var distance3 = seccion3.getBoundingClientRect();
+ var distance4 = seccion4.getBoundingClientRect();
+ var distance5 = seccion5.getBoundingClientRect();
+
+
+
+//Scroll con N y P 
+let sectionPoint = 0; 
+CalcViewPoint(); //calcula que sesion esta visualizando cuando carga la pagina
+
+
+
  //Detecto si presione P o N
  document.addEventListener("keyup", function(event){
   if (event.key == "p"){
-    console.log("Presiono P");
+    //console.log("Presiono P" + sectionPoint);
+   if (sectionPoint >= 2) {
+      sectionPoint -= 1;
+    } else {
+      sectionPoint = 1;
+    }
+    let maybeLink =  document.querySelector(`a.nav-link[data-key="${sectionPoint}"]`);
+    maybeLink.click()
     //moverse a la seccion previa
 
   } else if (event.key == "n"){
-    console.log("Presiono N");
+    //console.log("Presiono N" + sectionPoint);
+   if (sectionPoint <= 4){
+      sectionPoint += 1;
+    } else {
+      sectionPoint = 5;
+    }
+    
+    let maybeLink =  document.querySelector(`a.nav-link[data-key="${sectionPoint}"]`);
+    maybeLink.click()
     //Moverse a la siguiente seccion
   }
 })
+
+
+function CalcViewPoint() {
+  let vectorDist = [];
+ 
+  distance1 = seccion1.getBoundingClientRect().top;
+  distance2 = seccion2.getBoundingClientRect().top;
+  distance3 = seccion3.getBoundingClientRect().top;
+  distance4 = seccion4.getBoundingClientRect().top;
+  distance5 = seccion5.getBoundingClientRect().top;
+ 
+  vectorDist = [distance1, distance2, distance3, distance4, distance5];
+  //console.log(vectorDist)
+  for(let pos = 0; pos < vectorDist.length; pos++){
+   /* 
+Si la distancia del top esta entre -200 a 200 esta es en la seccion que este
+*/
+    if ( vectorDist[pos]> -250 && vectorDist[pos] <400 ){
+      sectionPoint = pos + 1;
+    
+    }
+  }
+  
+} 
+
+
+// Capturo cuando finaliza el scroll
+
+function noScroll (callback, refresh = 100) {
+  if (!callback || typeof callback !== 'function') return;
+  let isScrolling;
+  window.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(callback, refresh);
+  }, false);
+}
+
+noScroll(function () {
+  
+ CalcViewPoint();
+ 
+});
+
+
 
  
  document.querySelectorAll
@@ -84,29 +165,10 @@ document.addEventListener("keyup", function(event){
  </div>`; 
 
 
- //viewport 
-var seccion1 = document.getElementById("we");
-var seccion2 = document.getElementById("services");
-var seccion3 = document.getElementById("portfolio");
-var seccion4 = document.getElementById("location");
-var seccion5 = document.getElementById("contact");
-
-var distance = seccion4.getBoundingClientRect();
-
-console.log("Distancia: " + distance.)
 
 
-function isInViewport(elem) {
-  var distance = elem.getBoundingClientRect();
-  return (
-      distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
-  );
-}
-
-if (isInViewport(seccion1)) {
-  // está en el viewport
-  console.log("Seccion 1 en vierport");
-}
 
 
- // https://desarrolloweb.com/faq/como-saber-si-un-elemento-esta-en-el-viewport
+
+
+
