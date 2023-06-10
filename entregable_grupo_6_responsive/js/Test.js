@@ -13,12 +13,9 @@ let options = {
 
 const observer = new IntersectionObserver( entries => {
 
-    let entry = entries[0];
+    entries.forEach(entry =>{
 
     
-
-
-
     if (entry.isIntersecting){
         
         if (!entry.target.nextElementSibling) {
@@ -33,17 +30,17 @@ const observer = new IntersectionObserver( entries => {
     } else {
         if (!entry.target.previousElementSibling){
             cleanupOne();
-
+            div.setAttribute.
             //entry.target.remove
             console.log("Es el primero - Quitar del dom y quitar obserser");
             
             //div.removeChild(div.firstChild);
-            observer.unobserve(entry.target);
+            //observer.unobserve(entry.target);
 
         } 
         //console.log("No Visible");
     }
-
+})
 
 },options);
 
@@ -63,7 +60,6 @@ async function loadFact() {
 function factArticle(fact) {
     const article = document.createElement("article");
     article.innerText = fact;
-    //<article>fact</article><span></span>|<article>fact</article><span></span><article>fact </article><span></span>|
     return article;
 }
 
@@ -84,7 +80,7 @@ async function showFact() {
 }
 //showFact();
 async function cleanupOne() {
-    div.removeChild(div.firstElementChild);
+    div.removeChild(div.firstChild);
 }
 
 
@@ -111,8 +107,5 @@ await showFact();
 
 //observer.observe(div[0]);
 //console.log(fact);
-
-
-
 
 

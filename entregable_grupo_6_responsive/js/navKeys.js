@@ -94,8 +94,6 @@ noScroll(function () {
  
 });
 
-
-
  
  document.querySelectorAll
  for (let input of document.querySelectorAll("input, textarea")){
@@ -113,6 +111,7 @@ noScroll(function () {
  
  // MOSTRAR UN HELP apretando h
  let statusModal = 0;
+ let time;
  document.addEventListener("keyup", function(event){
      const maybeLink =  event.key;
      
@@ -120,10 +119,8 @@ noScroll(function () {
       if (maybeLink == "h") {
          if (statusModal == 0){
          showModal();
-         statusModal = 1;
          } else {
           closeModal();
-          statusModal= 0;
          }
       };
   })
@@ -134,12 +131,17 @@ noScroll(function () {
      modal.style.display='block';
      modal.style.paddingLeft = 0;
      modal.innerHTML= modalContent;
+     clearTimeout(time); 
+     time = setTimeout(()=>{closeModal()},20000);
+     statusModal = 1;
   }
 
   let closeModal = function () {
     let modal = document.querySelector(`[aria-label=navigationHelp]`);
     modal.classList.remove('show');
-    modal.innerHTML = ""; 
+    modal.innerHTML = "";
+    clearTimeout(time);
+    statusModal= 0; 
   }
   
  let modalContent = `<div class="modal-dialog">
