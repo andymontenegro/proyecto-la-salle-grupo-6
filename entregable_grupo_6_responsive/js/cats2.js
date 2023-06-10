@@ -22,13 +22,13 @@ function renderFact(fact) {
     div.appendChild(article);
     const articleObs = document.querySelector("#cats-facts article");
     console.log('articleObs is:', articleObs);
-    observer.observe(articleObs);
     return articleObs;
 }
 
 async function showFact() {
     const fact = await loadFact();
     renderFact(fact);
+    console.log('recarga fact')
 
 }
 //showFact();
@@ -38,26 +38,7 @@ async function cleanupOne() {
 
 showFact();
 
-function startAnimation(entries) {
-    if (entries[0].isIntersecting) {
-        console.log('Aun no sale de pantalla');
-    } else {
-        /*
-      article.style.transition = "";
-      article.style.transform = "";
-      */
-        showFact();
 
-
-    }
-}
-
-
-const observer = new IntersectionObserver(startAnimation, { threshold: 1 });
-
-//setInterval(showFact, 19000);
-
-//setTimeout(() => setInterval(cleanupOne, 20000), 21000);
-
+articleObs.addEventListener('animationiteration', showFact);
 
 
