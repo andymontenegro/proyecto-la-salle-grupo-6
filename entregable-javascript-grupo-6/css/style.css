@@ -305,6 +305,7 @@ footer a:hover {
 
 /* para la marquesina */
 
+/* cats facts 1
 #slider {
     margin: 0 auto;
     width: 100%;
@@ -329,6 +330,42 @@ footer a:hover {
 #cats-facts article::after {
     content: "😻";
     display: inline-block;
+}
+*/
+/* cats facts 2 */
+
+.cats-container {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    background-color: #bba4df;
+    color: #000000;
+    font-style: italic;
+}
+
+#cats-facts {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    animation: marquee 35s linear infinite;
+}
+
+#cats-facts::before,
+#cats-facts::after {
+    content: "😻";
+    font-style: normal;
+
+}
+
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
 }
 
 /* estilos para metro info*/

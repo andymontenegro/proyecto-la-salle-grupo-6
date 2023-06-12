@@ -54,8 +54,7 @@ setInterval(nextSlide, 500);
 setInterval(showFact, 3000);
 
 
-  
-  
-  
-  
-  
+
+
+
+
