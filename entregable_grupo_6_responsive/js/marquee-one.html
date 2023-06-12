@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animated Marquee with Random Cat Facts</title>
+    <style>
+        .marquee-container {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cats-facts" class="marquee-container">
+        <div class="marquee-content" id="marquee"></div>
+    </div>
+
+    <script>
+        // Fetch a random cat fact from the API
+        function fetchCatFact() {
+            const apiUrl = 'https://catfact.ninja/fact/?max_length=100';
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const fact = data.fact;
+                    const marquee = document.getElementById('marquee');
+                    marquee.textContent = fact;
+                })
+                .catch(error => {
+                    console.error('Error fetching cat fact:', error);
+                });
+        }
+
+        // Call fetchCatFact initially and then on animation end
+        fetchCatFact();
+        document.querySelector('.marquee-content').addEventListener('animationiteration', fetchCatFact);
+    </script>
+</body>
+
+</html>

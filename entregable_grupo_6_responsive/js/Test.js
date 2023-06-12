@@ -14,10 +14,12 @@ let options = {
 const observer = new IntersectionObserver( entries => {
 
     entries.forEach(entry =>{
-
+        
     
     if (entry.isIntersecting){
         
+      
+
         if (!entry.target.nextElementSibling) {
             
                 showFact();
@@ -30,14 +32,16 @@ const observer = new IntersectionObserver( entries => {
     } else {
         if (!entry.target.previousElementSibling){
             cleanupOne();
-            div.setAttribute.
+            //div.querySelector("article").style.transform = `translateX(500px)`
+            //div.querySelector("article").style.right=200;
             //entry.target.remove
             console.log("Es el primero - Quitar del dom y quitar obserser");
             
             //div.removeChild(div.firstChild);
-            //observer.unobserve(entry.target);
+            observer.unobserve(entry.target);
 
         } 
+        
         //console.log("No Visible");
     }
 })
@@ -80,7 +84,8 @@ async function showFact() {
 }
 //showFact();
 async function cleanupOne() {
-    div.removeChild(div.firstChild);
+    div.removeChild(div.firstElementChild);
+
 }
 
 

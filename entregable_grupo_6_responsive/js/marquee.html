@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animated Marquee with Random Cat Facts</title>
+    <style>
+        .marquee-container {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-content {
+            white-space: nowrap;
+            position: absolute;
+            animation: marquee 0s linear infinite;
+        }
+
+        .marquee-content span {
+            margin-right: 1rem;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee-container">
+        <div class="marquee-content" id="marquee"></div>
+    </div>
+
+    <script>
+        const maxItems = 5; // Número máximo de artículos visibles en la marquesina
+        const marqueeContent = document.getElementById('marquee');
+        let articles = []; // Almacena los artículos
+
+        function fetchCatFact() {
+            const apiUrl = 'https://catfact.ninja/fact';
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const fact = data.fact;
+                    articles.push(fact);
+
+                    if (articles.length > maxItems) {
+                        articles.shift(); // Elimina el primer artículo
+                    }
+
+                    renderArticles();
+                })
+                .catch(error => {
+                    console.error('Error fetching cat fact:', error);
+                });
+        }
+
+        function renderArticles() {
+            marqueeContent.innerHTML = articles.map(article => `<span>${article}</span>`).join('');
+        }
+
+        // Call fetchCatFact initially and then on animation end
+        fetchCatFact();
+        marqueeContent.addEventListener('animationiteration', fetchCatFact);
+    </script>
+</body>
+
+</html>
+

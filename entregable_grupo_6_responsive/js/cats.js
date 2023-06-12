@@ -3,7 +3,10 @@ const url = 'https://catfact.ninja/fact';
 const div = document.querySelector('#cats-facts');
 const span = "<spam></spam>"
 //const fact = div.querySelector("#article");
-
+let options = {
+    root: null,
+    threshold: 0,
+  };
 
 
 
@@ -46,7 +49,7 @@ const observer = new IntersectionObserver( entries => {
         } 
         //console.log("No Visible");
     }
-});
+}, options);
 
 
 
@@ -75,7 +78,7 @@ function renderFact(fact) {
     div.appendChild(article);
 /*     const span = document.createElement("span");
     article.appendChild(span); */
-    observer.observe(div.firstElementChild);
+    observer.observe(div.firstChild);
 }
 
 //Mostrar un Fact - Primero carga un fact y luego crear un articulo
