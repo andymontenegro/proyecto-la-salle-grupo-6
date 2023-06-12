@@ -35,7 +35,7 @@
     </header>
     <!-- Inicio del menu -->
 
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#menu"
           aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -334,7 +334,7 @@
           </div>
 
           <div class="row"> <!-- Para todas las ubicaciones -->
-            <div class="col-12 col-lg-6 mx-auto text-center ">
+            <div class="col-12 col-lg-4 mx-auto text-center ">
 
               <iframe class="mapa img-fluid"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.411255090261!2d2.127879314831561!3d41.40859050264455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816c5cc995f%3A0xe6d45d60cbf71998!2sLa%20Salle%20Campus%20Barcelona!5e0!3m2!1sen!2ses!4v1680078173191!5m2!1sen!2ses"
@@ -342,7 +342,7 @@
 
             </div>
 
-            <div class="col-12 col-lg-6 mx-auto">
+            <div class="col-12 col-lg-2 mx-auto">
               <div class="row">
                 <address title="Head Office"><strong>Head Office</strong><br><br>
                   <i>12356 Blank Street<br>
@@ -360,6 +360,12 @@
                   </i>
                 </address>
               </div>
+            </div>
+
+            <div class="col-12 col-lg-4 mx-auto">
+              <section id="tmb-info">
+
+              </section>
             </div>
 
           </div>
@@ -442,6 +448,8 @@
 
       </section>
     </main>
+    <!-- Modal para la navegacion por teclado -->
+    <div data-action="keypress.h->kbnav#showHelp" aria-label="navigationHelp" class="modal" data-key="h"></div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -458,8 +466,8 @@
     </footer>
   </div>
   <!--  <script async type="text/javascript" src="./js/enlaces.js"></script> -->
-  <!--<script async type="module" src="./js/cats2.js"></script>-->
-  <script async type="module" src="./js/maps.js"></script>
+  <script async type="module" src="./js/main.js"></script>
+
 </body>
 
 </html>

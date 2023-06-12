@@ -314,15 +314,15 @@ footer a:hover {
 }
 
 .marquee article {
-    display: inline-block;
-    width: 200%;
+    display: flex;
+    width: fit-content;
     height: 30px;
-
+    text-align: center;
     position: relative;
     overflow: hidden;
     font-family: 'Roboto Slab', serif;
     color: #291942;
-    animation: marquee 20s linear infinite;
+    animation: marquee 50s linear infinite;
 
 }
 
@@ -333,7 +333,7 @@ footer a:hover {
     }
 
     100% {
-        left: -100%;
+        left: -120%;
     }
 }
 
@@ -484,4 +484,36 @@ span.l10 {
 span.l11 {
     background-color: var(--l11-color);
     color: white;
+}
+
+/* loader */
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #61458c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: relative;
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
 }
