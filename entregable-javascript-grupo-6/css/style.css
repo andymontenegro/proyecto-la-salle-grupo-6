@@ -1,0 +1,542 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    /*margin: 0 auto;*/
+    color: #636363;
+}
+
+
+@media screen and (min-width: 992px) {
+    header {
+        background-image: url("../img/header.jpg");
+
+        background-size: 100% 120%;
+        height: 300px;
+        padding-top: 70px;
+        padding-left: 30px;
+
+    }
+
+    /* CAMBIO DE IMAGEN SEGUN TAMAÑO DE PANTALLA DE FORMA MANUAL - 
+PODRIA SER CON BOOTSTRAP TAMBIEN, PERO LO DEJARE ASI PARA TENER ESTA PRACTICA */
+
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        background-image: url("../img/header-mini.png");
+
+        background-size: 100% 121%;
+        height: 300px;
+        padding-top: 70px;
+        padding-left: 30px;
+
+    }
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+nav {
+    color: rgb(255, 255, 255);
+    background-color: #61458c;
+
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: #61458c !important;
+    /*no toma el cambio de color de letra sino agrego el important*/
+    text-align: center;
+
+    border-radius: 4px;
+}
+
+
+
+/*Seccion del Who We are*/
+
+.we-text {
+    text-align: justify;
+}
+
+@media screen and (min-width: 992px) {
+    .colum {
+        border-left: solid 1px #ccc;
+    }
+}
+
+.Img1 {
+    float: left;
+    margin-right: 20px;
+}
+
+.ImgAds {
+    float: right;
+    margin-left: 20px;
+    margin-right: 5px;
+    height: 40%;
+    width: 40%;
+}
+
+/*Seccion del Services*/
+
+
+
+.icon-circle {
+    color: #61458c;
+
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #d3d3d3 4px solid;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms ease-out;
+    transition: color 300ms ease-out;
+}
+
+
+.icon-circle:hover {
+    color: #6c538d;
+    background-color: #e8e2ee;
+    float: left;
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #939097 4px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.icon-circle:active {
+    color: white;
+    float: left;
+    background-color: #8d7bad;
+    font-size: 42px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: #655b74 4px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Seccion Portfolio */
+
+.imgrotate {
+    max-height: 170px;
+    max-width: 360px !important;
+    transform: translate(0px, 0px);
+    transition: transform 410ms ease-out;
+    border-radius: 4px !important;
+}
+
+.imgrotate:hover {
+    transform: rotate(345deg) translate(0px, 0px);
+}
+
+.imgrotate2 {
+    max-height: 170px;
+    /* */
+    max-width: 360px !important;
+    transition: transform 800ms ease-out,
+        border 600ms ease 104ms,
+        border-radius 600ms ease 104ms !important;
+}
+
+.imgrotate2:hover {
+    transform: rotate(360deg) translate(0px, 0px);
+    transition:
+        transform 800ms ease 104ms,
+        border 600ms ease 104ms,
+        border-radius 600ms ease 104ms !important;
+    border: 600px none rgba(100, 100, 100, 1) !important;
+    border-radius: 50% !important;
+
+}
+
+/* Seccion Location */
+
+
+address {
+    font-style: normal;
+    padding-top: 25px;
+
+}
+
+@media screen and (max-width: 992px) {
+    address {
+        font-style: normal;
+        padding-top: 25px;
+        text-align: center;
+
+
+    }
+}
+
+
+.mapa {
+    margin-top: 20px;
+    width: 350px !important;
+    height: 350px !important;
+    border: rgb(0, 0, 0) 2px solid;
+    border-radius: 50%;
+
+}
+
+/* Seccion Email us */
+
+.fondo {
+    color: white;
+    background-image: url(../img/map-image.png);
+    height: 50hv;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-color: #61458c;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+form input {
+
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 30px;
+
+    border-radius: 3px;
+    border: none;
+
+
+}
+
+form input :required {
+    background-color: #09032ce7;
+}
+
+form textarea {
+
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Open-Sans', Helvetica, sans-serif;
+}
+
+
+.submit {
+
+
+    width: 100px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 5px;
+
+    text-align: center;
+
+}
+
+
+
+
+
+/* Seccion Footer */
+
+footer {
+
+    margin: 0 auto;
+    background-color: #61458c;
+    color: #ffffff;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    padding-bottom: 12px;
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    transition: background-color 300ms ease-out;
+
+}
+
+footer a:hover {
+    display: inline-block;
+    color: #61458c;
+    transition: background-color 300ms ease-out;
+    background-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.conborde {
+    border: 1px solid #61458c;
+}
+
+/* para la marquesina */
+
+/* cats facts 1
+#slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    background-color: #bba4df;
+    color: #000000;
+
+    font-style: italic;
+}
+
+#cats-facts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#cats-facts article::before,
+#cats-facts article::after {
+    content: "😻";
+    display: inline-block;
+}
+*/
+/* cats facts 2 */
+
+.cats-container {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    background-color: #bba4df;
+    color: #000000;
+    font-style: italic;
+}
+
+#cats-facts {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    animation: marquee 35s linear infinite;
+}
+
+#cats-facts::before,
+#cats-facts::after {
+    content: "😻";
+    font-style: normal;
+
+}
+
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+/* estilos para metro info*/
+#tmb-info .metro-icon::before {
+    content: url("../img/metro-bcn.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+:root {
+    --l1-color: #CE1126;
+    --l2-color: #9B4599;
+    --l3-color: #148F42;
+    --l4-color: #FFB700;
+    --l5-color: #005A97;
+    --l6-color: #847DC6;
+    --l7-color: #AD6218;
+    --l8-color: #E37AB0;
+    --l9-color: #F79239;
+    --l10-color: #00AFEF;
+    --l11-color: #A8D165;
+
+
+
+}
+
+#tmb-info span {
+    display: inline-block;
+    padding: 4px;
+    margin-right: 2px;
+
+}
+
+#tmb-info p {
+    margin-bottom: 0.2em;
+}
+
+
+
+.visible {
+    visibility: visible;
+}
+
+.tmb-info-heading {
+    padding-top: 1.5em;
+    font-weight: 500;
+
+}
+
+.tmb-info-heading-margin-t {
+    font-weight: 500;
+    margin-top: 2em;
+
+}
+
+.bus-info-heading-margin-t::before {
+    content: url("../img/bus-icon.png");
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.bus-info-heading-margin-t {
+    font-weight: 500;
+    margin-top: 2em;
+
+}
+
+.bicing-info-heading-margin-t::before {
+    content: url("../img/bici-icon.png");
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.bicing-info-heading-margin-t {
+    font-weight: 500;
+    margin-top: 2em;
+
+}
+
+
+
+
+.margin-top-info {
+    margin-top: 1.5em;
+}
+
+span.l1 {
+    background-color: var(--l1-color);
+    color: white;
+}
+
+span.l2 {
+    background-color: var(--l2-color);
+    color: white;
+}
+
+span.l3 {
+    background-color: var(--l3-color);
+    color: white;
+}
+
+span.l4 {
+    background-color: var(--l4-color);
+    color: black;
+}
+
+span.l5 {
+    background-color: var(--l5-color);
+    color: white;
+}
+
+span.l6 {
+    background-color: var(--l6-color);
+    color: white;
+}
+
+span.l7 {
+    background-color: var(--l7-color);
+    color: white;
+}
+
+span.l8 {
+    background-color: var(--l8-color);
+    color: white;
+}
+
+span.l9 {
+    background-color: var(--l9-color);
+    color: white;
+}
+
+span.l10 {
+    background-color: var(--l10-color);
+    color: white;
+}
+
+span.l11 {
+    background-color: var(--l11-color);
+    color: white;
+}
+
+/* loader */
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #61458c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: relative;
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
