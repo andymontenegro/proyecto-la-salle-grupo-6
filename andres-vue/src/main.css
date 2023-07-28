@@ -1,0 +1,304 @@
+:root {
+
+	--shadow: 0 1px 3px hsl(var(--primary-hue), 70%, 40%);
+
+	--primary-hue: 270;
+	--primary-color: var(--primary-hue), 100%, 50%;
+	--complementary-color: calc(var(--primary-hue) - 120), 87%, 47%;
+	--complementary-color-2: calc(var(--primary-hue) - 240), 87%, 47%;
+	--business-glow: 0px 0px 4px hsl(var(--complementary-color));
+
+
+	--gray-95: #262626;
+	--gray-90: #3D3D3D;
+	--gray-80: #454545;
+	--gray-70: #4F4F4F;
+	--gray-60: #5D5D5D;
+	--gray-50: #6D6D6D;
+	--gray-40: #949494;
+	--gray-30: #B0B0B0;
+	--gray-20: #D1D1D1;
+	--gray-10: #E7E7E7;
+	--gray-05: #F6F6F6;
+
+	--personal-glow: 0px 0px 4px hsl(var(--complementary-color-2));
+	--theme-glow: 0px 0px 4px hsl(var(--primary-color));
+	--personal: hsl(var(--complementary-color-2));
+	--priority-bg: 90%;
+	--priority-text-color: 35%;
+
+	--business: hsl(var(--complementary-color));
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+	color: hsl(var(--primary-hue), 90%, 35%);
+	font-size: 1.2rem;
+}
+
+body {
+	background-color: hsl(var(--primary-hue), 20%, 90%);
+	color: hsl(var(--primary-hue), 90%, 30%);
+}
+
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5em;
+}
+
+h3 {
+	color: hsl(var(--primary-hue), 90%, 35%);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+h4 {
+	color: hsl(var(--primary-hue), 50%, 50%);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.greeting .title {
+	display: flex;
+}
+
+.greeting .title input {
+	margin-left: 0.5rem;
+	flex: 1 1 0%;
+	min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+	color: hsl(var(--primary-hue), 90%, 35%);
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.create-todo input[type="text"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: hsl(var(--primary-hue), 90%, 35%);
+	background-color: hsl(var(--primary-hue), 80%, 96%);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.5rem;
+}
+
+.create-todo .options {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.create-todo .priority {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.create-todo .priority label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background-color: hsl(var(--primary-hue), 80%, 96%);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}
+
+.create-todo .options label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background-color: hsl(var(--primary-hue), 80%, 96%);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 20%;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble.priorities {
+	border-color: hsl(var(--primary-color));
+	box-shadow: var(--theme-glow);
+	border-radius: 50%;
+}
+
+.bubble.personal {
+	border-color: hsl(var(--complementary-color-2));
+	box-shadow: var(--personal-glow);
+	border-radius: 20%;
+}
+
+
+.bubble::after {
+	content: "";
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after {
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+.bubble.priorities::after {
+	background-color: hsl(var(--primary-color));
+	box-shadow: var(--theme-glow);
+}
+
+input:checked~.bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.create-todo .options label div {
+	color: var(--primary-color);
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+
+.create-todo input[type="submit"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	background-color: hsl(var(--primary-hue), 90%, 35%);
+	color: hsl(var(--primary-hue), 50%, 90%);
+	border-radius: 0.5rem;
+	box-shadow: var(--theme-glow);
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.create-todo input[type="submit"]:hover {
+	opacity: 0.75;
+}
+
+.todo-list .list {
+	margin: 1rem 0;
+}
+
+.todo-list .todo-item {
+	display: flex;
+	align-items: center;
+	background-color: hsl(var(--primary-color), 10%);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+}
+
+.todo-item label {
+	display: block;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.todo-item .todo-content {
+	flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+	color: hsl(var(--primary-hue), 70%, 30%);
+	font-size: 1.125rem;
+}
+
+.todo-item .actions {
+	display: flex;
+	align-items: center;
+}
+
+.todo-item .actions button {
+	display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+
+	/* overrides input font size*/
+	font-size: 0.8rem;
+
+}
+
+.todo-item .actions button:hover {
+	opacity: 0.75;
+}
+
+.todo-item .actions .priority-label {
+	display: inline-block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	background-color: hsl(var(--primary-hue), 60%, var(--priority-bg));
+	margin-right: 0.5rem;
+	font-size: 0.8rem;
+	color: hsl(var(--primary-hue), 90%, var(--priority-text-color));
+
+
+}
+
+.todo-item .actions .edit {
+	margin-right: 0.5rem;
+	background-color: hsl(var(--primary-hue), 90%, 35%);
+}
+
+.todo-item .actions .delete {
+	background-color: hsl(var(--primary-hue), 90%, 35%);
+}
+
+.todo-item.done .todo-content input {
+	text-decoration: line-through;
+	color: hsl(var(--primary-hue), 50%, 65%);
+
+}
+
+input::placeholder {
+	color: hsl(var(--primary-hue), 50%, 65%);
+}

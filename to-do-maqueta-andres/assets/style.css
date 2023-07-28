@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&family=Roboto:ital,wght@0,400;1,400;1,700&display=swap');
+
+:root {
+    --primary-hue: 263;
+    --primary-color: var(--primary-hue), 100%, 50%;
+    --secondary-color: 163, 100%, 50%;
+    --accent-color: #ffc107;
+
+    --gray-95: #262626;
+    --gray-90: #3D3D3D;
+    --gray-80: #454545;
+    --gray-70: #4F4F4F;
+    --gray-60: #5D5D5D;
+    --gray-50: #6D6D6D;
+    --gray-40: #949494;
+    --gray-30: #B0B0B0;
+    --gray-20: #D1D1D1;
+    --gray-10: #E7E7E7;
+    --gray-05: #F6F6F6;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--primary-hue), 20%, 90%);
+    color: hsl(var(--primary-hue), 100%, 10%);
+
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.note {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background-color: hsl(var(--primary-color), 10%);
+    color: hsl(var(--primary-hue), 70%, 40%);
+    display: flex;
+
+}
+
+.welcome-bg {
+    background-color: hsl(var(--primary-color), 30%);
+    min-height: 140px;
+    padding: 1rem;
+}
+
+.day-text {
+    font-size: 1.375rem;
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+
+.date-number {
+    font-size: 3rem;
+}
+
+.month-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.year-number {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.note::before {
+    content: "";
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: -15px;
+
+
+}
+
+.task-aaa::before {
+    background-color: hsl(var(--primary-hue), 90%, 35%);
+}
+
+.task-aa::before {
+    background-color: hsl(var(--primary-hue), 70%, 60%);
+}
+
+.task-a::before {
+    background-color: hsl(var(--primary-hue), 60%, 80%);
+}
+
+.add-note {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: hsl(var(--primary-hue), 90%, 35%);
+    color: hsl(var(--primary-hue), 50%, 90%);
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.dots {
+    border: 1px #00FF00 dotted;
+}
